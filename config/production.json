@@ -1,0 +1,5 @@
+{
+  "NAME": "produciton",
+  "PORT": 3002,
+  "SENTRY": "https://ccb54b15e7614aaf9d4deeaca3d2c1ea@sentry.io/1245309"
+}
