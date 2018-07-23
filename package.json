@@ -7,7 +7,7 @@
     "test": "npm test",
     "lint": "eslint",
     "start": "./node_modules/.bin/babel-node index.js",
-    "coverage": "istanbul cover  --report html  ./node_modules/.bin/babel-node ./node_modules/mocha/bin/_mocha tests/*.js  --exit",
+    "coverage": "istanbul cover  --report html  ./node_modules/.bin/babel-node ./node_modules/mocha/bin/_mocha tests/*.test.js",
     "n-start": "nodemon ./node_modules/.bin/babel-node index.js"
   },
   "keywords": [
@@ -34,7 +34,7 @@
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
-    "istanbul": "^0.4.5",
+    "istanbul": "^1.0.0-alpha",
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5"
   }

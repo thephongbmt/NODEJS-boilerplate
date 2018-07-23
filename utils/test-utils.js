@@ -1,6 +1,5 @@
 /*eslint-disable*/
 import server from '../server';
-
 export const test = (describeMess = '[MissDescription]', testCases) => {
   describe(describeMess, () => {
     after(done => {

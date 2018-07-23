@@ -9,3 +9,4 @@ export const SUCCESS_CODE_DEFAULT = 200;
 export const PORT = config.get('PORT');
 export const SENTRY = config.get('SENTRY');
 export const ENV = config.get('NAME');
+export const DESCRIPTION = config.get('DESCRIPTION');

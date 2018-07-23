@@ -1,6 +1,5 @@
 /*eslint-disable*/
 import { ERROR_CODE_DEFAULT, ERROR_MESSAGE_DEFAULT, SUCCESS_CODE_DEFAULT } from '../constant';
-import moment from 'moment';
 import Raven from 'raven';
 export const middleware = {
 
@@ -10,7 +9,7 @@ export const middleware = {
   handleError: app =>
     app.use((err, req, res, next) => {
       res.status(500).send(err);
-      return Raven.captureException(new Error(err.errors));
+      //return Raven.captureException(new Error(err.errors));
     }),
 
   /*

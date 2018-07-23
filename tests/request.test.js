@@ -34,7 +34,7 @@ let testCaseGetError = [
         .agent(server)
         .get('/error')
         .end((err, res, body) => {
-          expect(res.body.errors).to.equal('Error');
+          expect(res.body.errors).to.equal('OPs Some thing broken here !');
           expect(res).to.have.status(500);
           done();
         });
