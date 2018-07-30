@@ -1,6 +1,5 @@
 import config from 'config';
 
-export const ERROR_CODE_DEFAULT = 500;
 export const ERROR_MESSAGE_DEFAULT = 'Some thing wrong !';
 
 export const SUCCESS_CODE_DEFAULT = 200;
