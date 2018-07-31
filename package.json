@@ -40,7 +40,6 @@
     "eslint-plugin-node": "^6.0.1",
     "istanbul": "^1.0.0-alpha",
     "mocha": "^5.2.0",
-    "nodemon": "^1.17.5",
     "super": "^0.2.3",
     "test": "^0.6.0"
   }

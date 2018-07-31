@@ -9,17 +9,13 @@
     "ecmaVersion": 8,
     "sourceType": "module"
   },
-  "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.formatOnPaste": true
-  },
   "rules": {
     "no-unused-vars": 2,
     "no-undef": 2,
     "typescript.suggestionActions.enabled": false,
     "indent": ["error", "tab"],
     "quotes": ["error", "single"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "linebreak-style": ["error", "windows"]
   }
 }

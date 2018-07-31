@@ -5,7 +5,7 @@ import Raven from "raven";
 import compression from "compression";
 import cors from "cors";
 import expressValidation from "express-validation";
-import { middleware } from "./middleware/error-handler";
+import { middleware } from "./middleware/middleware-api";
 import { SENTRY, PORT, ENV, DESCRIPTION } from "./constant";
 
 const app = express();
@@ -45,7 +45,6 @@ app.get("/auth", (req, res, next) => {
   next();
 });
 
-middleware;
 
 //check request not found
 middleware.handleNotFoundRequest(app);
