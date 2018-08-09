@@ -23,22 +23,3 @@ let testCasesGetPing = [
   }
 ];
 test('[GET]-/ping', testCasesGetPing);
-
-
-//example for test case
-let testCaseGetError = [
-  {
-    message: 'Should be return error',
-    itFunc: done => {
-      chai.request
-        .agent(server)
-        .get('/error')
-        .end((err, res, body) => {
-          expect(res.body.errors).to.equal('OPs Some thing broken here !');
-          expect(res).to.have.status(500);
-          done();
-        });
-    }
-  }
-];
-test('[GET]-/error', testCaseGetError);

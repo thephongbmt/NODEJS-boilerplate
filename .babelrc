@@ -1,3 +1,6 @@
 {
-  "presets": ["env"]
+  "presets": ["env"],
+  "babel": {
+    "plugins": ["transform-async-to-generator"]
+  }
 }

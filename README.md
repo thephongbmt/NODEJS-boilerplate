@@ -5,7 +5,7 @@
 
 # DOCKER
 
-### DOCKER_BUILD
+### DOCKER BUILD IMAGE
 - docker build -t '${image_name}' .
 
 ### START IMAGE DOCKER

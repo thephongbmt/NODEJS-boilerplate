@@ -1,5 +1,9 @@
-class APIError extends Error {
-  constructor(message, status, isPublic) {
+
+/*eslint-disable*/
+import httpStatus from 'http-status';
+
+export class APIError extends Error {
+  constructor(message, status = httpStatus.INTERNAL_SERVER_ERROR, isPublic = false) {
     super(message);
     this.message = message;
     this.status = status;
@@ -9,4 +13,3 @@ class APIError extends Error {
   }
 }
 
-module.exports = APIError;

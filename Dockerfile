@@ -4,6 +4,7 @@ FROM node
 RUN mkdir  /docker-skeleton
 #Move in docker-skeleton
 WORKDIR /docker-skeleton
+#Copy 2file from real-folder to docker folder
 #Optimize
 #Docker have build cache show when 2 files below change it will be run yarn install
 COPY package*.json ./

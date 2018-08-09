@@ -4,10 +4,12 @@ import bodyParser from "body-parser";
 import Raven from "raven";
 import compression from "compression";
 import cors from "cors";
-import expressValidation from "express-validation";
-import { middleware } from "./middleware/middleware-api";
+import router from "./api";
+import { middleware } from "./middleware/express";
 import { SENTRY, PORT, ENV, DESCRIPTION } from "./constant";
-
+require("babel-core").transform("code", {
+  plugins: ["transform-async-to-generator"]
+});
 const app = express();
 const route = express.Router();
 
@@ -35,17 +37,11 @@ middleware.handleResponse(app);
 app.get("/ping", (req, res, next) => {
   res.SUCCESS("pong");
 });
-//check API test is error
-app.get("/error", (req, res, next) => {
-  return next(res.ERROR("OPs Some thing broken here !"));
+app.get("/", (req, res, next) => {
+  res.render("API is alive");
 });
-
-app.get("/auth", (req, res, next) => {
-  res.SUCCESS({ token: 123456 });
-  next();
-});
-
-
+//init route
+router(app);
 //check request not found
 middleware.handleNotFoundRequest(app);
 //MIDDLE WARE Handler Error
