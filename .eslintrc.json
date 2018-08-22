@@ -2,14 +2,18 @@
   "env": {
     "commonjs": true,
     "es6": true,
+    "mocha": true,
+    "jasmine": true,
     "browser": true
   },
-  "extends": "eslint:recommended",
+  "plugins": ["jasmine"],
+  "extends": ["eslint:recommended", "plugin:jasmine/recommended"],
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module"
   },
   "rules": {
+    "no-mixed-spaces-and-tabs": 0,
     "no-unused-vars": 2,
     "no-undef": 2,
     "typescript.suggestionActions.enabled": false,

@@ -1,0 +1,9 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDelete": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "prettier.eslintIntegration": true
+}

@@ -1,7 +1,24 @@
+
+# Project
 ### start project :
    1. `yarn install` | `npm install`
    2. `yarn start` | `npm start`
 
+### run test:
+   3. `yarn coverage`
+
+# Code convention
+## With Visual studio code
+- Step 1:
+    - `npm install eslint -g --save-dev`
+- Step 2:
+    - add eslint to VS code
+- Step 3:
+    - `yarn global add prettier`
+- Step 4:
+    - add prettier into VS code
+### Reference Doc : 
+- [Config eslint vs Visual Studio](https://medium.com/@pgivens/write-cleaner-code-using-prettier-and-eslint-in-vscode-d04f63805dcd)
 
 # DOCKER
 
