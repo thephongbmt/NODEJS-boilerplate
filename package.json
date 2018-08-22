@@ -4,11 +4,11 @@
   "description": "this is template project for restful api ",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "node -r babel-register -r babel-polyfill node_modules/mocha/bin/_mocha tests/*.test.js",
     "eslint-check": "./node_modules/.bin/eslint .",
     "eslint-fix": "./node_modules/.bin/eslint --fix .",
     "start": "node -r babel-register -r babel-polyfill index.js",
-    "coverage": "nyc --reporter=html babel-register -r babel-polyfill ./node_modules/mocha/bin/_mocha tests/*.test.js",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter  dot tests/*.test.js --require babel-polyfill",
     "n-start": "nodemon -r babel-register -r babel-polyfill index.js"
   },
   "keywords": [

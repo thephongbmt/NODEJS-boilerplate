@@ -7,9 +7,7 @@ import router from './api';
 import { middleware } from './middleware/express';
 import { SENTRY, PORT, ENV, DESCRIPTION } from './constant';
 import chalk from './node_modules/chalk';
-require('babel-core').transform('code', {
-	plugins: ['transform-async-to-generator']
-});
+
 const app = express();
 
 //MIDDLE WARE
