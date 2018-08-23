@@ -1,13 +1,14 @@
 import user from './routers/user';
-import chalk from 'chalk';
+import Log from '../lib/Log';
+import express from 'express';
 export default app => {
 	try {
-		let route = app.Route();
+		let route = express.Router();
 		//init all router
-		app.use(user(route));
+		app.use('/', user(route));
 		//message
-		chalk.green('Route was init');
+		Log.print('Route was init', 'green');
 	} catch (e) {
-		chalk.red(e);
+		Log.print(e, 'red');
 	}
 };

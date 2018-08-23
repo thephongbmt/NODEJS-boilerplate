@@ -1,6 +1,6 @@
 import httpStatus from 'http-status';
 
-export class APIError extends Error {
+export default class APIError extends Error {
 	constructor(
 		message,
 		status = httpStatus.INTERNAL_SERVER_ERROR,

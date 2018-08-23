@@ -6,8 +6,7 @@ import cors from 'cors';
 import router from './api';
 import { middleware } from './middleware/express';
 import { SENTRY, PORT, ENV, DESCRIPTION } from './constant';
-import chalk from './node_modules/chalk';
-
+import Log from './lib/Log';
 const app = express();
 
 //MIDDLE WARE
@@ -18,7 +17,7 @@ app.use(compression());
 //cross origin resource sharing
 app.use(cors());
 //public resource
-app.use('/', express.static('assets/public'));
+app.use('/assets', express.static(`${__dirname}assets/public`));
 
 //RAVEN
 // Must configure Raven before doing anything else with it
@@ -37,8 +36,10 @@ app.get('/ping', (req, res) => {
 app.get('/', (req, res) => {
 	res.end('API is alive');
 });
+
 //init route
 router(app);
+
 //check request not found
 middleware.handleNotFoundRequest(app);
 //MIDDLE WARE Handler Error
@@ -51,9 +52,12 @@ const server = app.listen(PORT || 3000, () => {
 	let port = server.address().port;
 	let host =
 		server.address().address === '::' ? 'localhost' : server.address().address;
-	chalk.green(`- ${DESCRIPTION}
+	Log.print(
+		`- ${DESCRIPTION}
   + Server is running at http://${host}:${port}
-  + API ENV: ${ENV || 'development'}`);
+  + API ENV: ${ENV || 'development'}`,
+		'green'
+	);
 });
 
 export default server;

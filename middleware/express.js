@@ -22,7 +22,6 @@ export const middleware = {
 			) => {
 				return new APIError(message, status);
 			};
-
 			res.SUCCESS = resSuccess;
 			res.ERROR = resError;
 			next();
@@ -41,7 +40,7 @@ export const middleware = {
     Handle express  error from route express
   */
 	handleError: app =>
-		app.use((err, req, res) => {
+		app.use((err, req, res, next) => {
 			err = _convertErr(err);
 			let message =
 				err.isPublic || req.query.error === '1'
@@ -56,6 +55,7 @@ export const middleware = {
 					  };
 			res.status(httpStatus.INTERNAL_SERVER_ERROR).json(message);
 			//return Raven.captureException(err);
+			return next();
 		})
 };
 
@@ -68,6 +68,7 @@ export const middleware = {
 */
 const _convertErr = err => {
 	let errorAPI;
+
 	if (typeof err === 'string') {
 		errorAPI = new APIError(err, httpStatus.INTERNAL_SERVER_ERROR);
 	} else if (err instanceof expressValidation.ValidationError) {

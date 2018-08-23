@@ -5,5 +5,5 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
 }

@@ -17,7 +17,7 @@ let users = [
 		phone: '0909828929',
 		gender: 'Male',
 		username: 'nguyenvanb',
-		password: '$2y$12$g/01cjDqJj.ebztR0x7zmuqIQ5kdLapXfxX10Zql3NrIYgeMUOGGy' //12313 encrypt  by bcrypt
+		password: '$2y$12$g/01cjDqJj.ebztR0x7zmuqIQ5kdLapXfxX10Zql3NrIYgeMUOGGy' //123123 encrypt  by bcrypt
 	}
 ];
 

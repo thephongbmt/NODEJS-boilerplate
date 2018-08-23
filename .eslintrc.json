@@ -2,8 +2,8 @@
   "env": {
     "commonjs": true,
     "es6": true,
+    "node": true,
     "mocha": true,
-    "jasmine": true,
     "browser": true
   },
   "plugins": ["jasmine"],
@@ -19,6 +19,10 @@
     "typescript.suggestionActions.enabled": false,
     "indent": ["error", "tab"],
     "quotes": ["error", "single"],
+    "no-console": ["error"],
+    "prefer-template": "error",
+    "no-var": "error",
+    "space-infix-ops": "error",
     "semi": ["error", "always"],
     "linebreak-style": ["error", "windows"]
   }
