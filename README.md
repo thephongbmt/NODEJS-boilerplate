@@ -29,11 +29,10 @@
   - add eslint to VS code
 - Step 3:
   - `yarn global add prettier`
-- Step 4:
-  - add prettier into VS code
 
 ### #Reference Doc :
-
+- [Eslint Rule](https://eslint.org/docs/rules/)
+- [Eslint Config](https://eslint.org/docs/user-guide/configuring)
 - [Config eslint for Visual Studio](https://medium.com/@pgivens/write-cleaner-code-using-prettier-and-eslint-in-vscode-d04f63805dcd)
 
 # DOCKER

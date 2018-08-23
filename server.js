@@ -52,7 +52,7 @@ const server = app.listen(PORT || 3000, () => {
 	let port = server.address().port;
 	let host =
 		server.address().address === '::' ? 'localhost' : server.address().address;
-	Log.print(
+	Log.info(
 		`- ${DESCRIPTION}
   + Server is running at http://${host}:${port}
   + API ENV: ${ENV || 'development'}`,

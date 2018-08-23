@@ -7,8 +7,8 @@ export default app => {
 		//init all router
 		app.use('/', user(route));
 		//message
-		Log.print('Route was init', 'green');
+		Log.success('Route was init', 'green');
 	} catch (e) {
-		Log.print(e, 'red');
+		Log.error(e, 'red');
 	}
 };
