@@ -63,4 +63,4 @@ git pull
 docker build -t 'skeleton'
 docker stop 'docker-skeleton'
 docker rm 'docker-skeleton'
-docker run --name='skeleton' -p 3001:3002 --env NODE_ENV='production' docker-skeleton
+docker run --name='skeleton' -p 3001:3002 --env NODE_ENV='production' docker-skeleton 
