@@ -26,6 +26,6 @@
     "prefer-template": ["error"],
     "space-infix-ops": ["error"],
     "semi": ["error", "always"],
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error"]
   }
 }
