@@ -10,5 +10,7 @@ services:
     user: root
     ports:
       - 8080:8080
+    volumes:
+      - ./jenkins:/app
     container_name: jenkins
    
