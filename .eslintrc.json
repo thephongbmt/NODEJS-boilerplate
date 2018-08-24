@@ -17,14 +17,14 @@
     "no-unused-vars": 2,
     "no-undef": 2,
     "no-console": ["error"],
-    "no-var": "error",
+    "no-var": ["error"],
     "no-multiple-empty-lines": ["error"],
-    "no-trailing-spaces": "error",
+    "no-trailing-spaces": ["error"],
     "typescript.suggestionActions.enabled": false,
     "indent": ["error", "tab"],
     "quotes": ["error", "single"],
-    "prefer-template": "error",
-    "space-infix-ops": "error",
+    "prefer-template": ["error"],
+    "space-infix-ops": ["error"],
     "semi": ["error", "always"],
     "linebreak-style": ["error", "windows"]
   }
