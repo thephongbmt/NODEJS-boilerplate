@@ -1,10 +1,5 @@
 version: '3.2' #docker-compose.yml
 services:
-  #sonarqube:
-  #  image: sonarqube:6.7-alpine
-  #  ports:
-  #    - 9092:9092
-  #  container_name: sonarqube
   jenkins:
     image: jenkins:2.60.3
     user: root

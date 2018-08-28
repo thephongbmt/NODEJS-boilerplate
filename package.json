@@ -4,12 +4,12 @@
   "description": "this is template project for restful api ",
   "main": "index.js",
   "scripts": {
-    "test": "node -r babel-register -r babel-polyfill node_modules/mocha/bin/_mocha tests/*.test.js",
+    "start": "node -r babel-register -r babel-polyfill index.js",
+    "nstart": "nodemon -r babel-register -r babel-polyfill index.js",
     "eslint-check": "./node_modules/.bin/eslint .",
     "eslint-fix": "./node_modules/.bin/eslint --fix .",
-    "start": "node -r babel-register -r babel-polyfill index.js",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter  dot tests/*.test.js --require babel-polyfill",
-    "n-start": "nodemon -r babel-register -r babel-polyfill index.js"
+    "test": "node -r babel-register -r babel-polyfill node_modules/mocha/bin/_mocha tests/*.test.js",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter  dot tests/*.test.js --require babel-polyfill"
   },
   "keywords": [
     "BPR"
