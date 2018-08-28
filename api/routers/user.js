@@ -1,4 +1,4 @@
-import { getUserController, loginController } from '../controllers';
+import {getUserController, loginController} from '../controllers/user';
 
 export default route => {
 	route.get('/user', getUserController);
