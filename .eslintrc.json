@@ -16,16 +16,15 @@
     "no-mixed-spaces-and-tabs": 0,
     "no-unused-vars": 2,
     "no-undef": 2,
-    "no-console": ["error"],
-    "no-var": ["error"],
-    "no-multiple-empty-lines": ["error"],
-    "no-trailing-spaces": ["error"],
+    "no-console": 2,
+    "no-var": 2,
+    "no-multiple-empty-lines": 2,
+    "no-trailing-spaces": 2,
     "typescript.suggestionActions.enabled": false,
     "indent": ["error", "tab"],
     "quotes": ["error", "single"],
-    "prefer-template": ["error"],
+    "prefer-template": 2,
     "space-infix-ops": ["error"],
-    "semi": ["error", "always"],
-    "linebreak-style": ["error", "windows"]
+    "semi": ["error", "always"]
   }
 }
