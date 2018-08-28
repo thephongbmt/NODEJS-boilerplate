@@ -24,7 +24,7 @@ CMD [ "yarn","start" ]
 #   docker rm ${image-name} | ${image-id}
 #DOCKER_BUILD
 # docker build -t '${image_name}' .
-
+ 
 #START IMAGE DOCKER
 # EX: docker run --name='skeleton' -p 3001:3002 --env NODE_ENV='production' docker-skeleton
 #  docker run --name='${name_container}' ${docker_image_name} -d -p ${communicate_port}: ${port_docker} --env <key> =<value>
