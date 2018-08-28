@@ -1,4 +1,4 @@
-import { test } from '../utils/test-utils';
+import {test} from '../utils/test-utils';
 import server from '../server';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 let testCasesGetPing = [
 	{
 		message: 'Should return list user',
-		itFunc: done => {
+		itFunc : done => {
 			chai.request
 				.agent(server)
 				.get('/user')

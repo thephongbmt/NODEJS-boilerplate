@@ -4,14 +4,14 @@ import Raven from 'raven';
 import compression from 'compression';
 import cors from 'cors';
 import router from './api';
-import { middleware } from './middleware/express';
-import { SENTRY, PORT, ENV, DESCRIPTION } from './constant';
+import {middleware} from './middleware/express';
+import {SENTRY, PORT, ENV, DESCRIPTION} from './constant';
 import Log from './lib/Log';
 const app = express();
 
 //MIDDLE WARE
 //Handler body parser Request
-app.use(bodyParser.urlencoded({ extended: false }, bodyParser.json()));
+app.use(bodyParser.urlencoded({extended: false}, bodyParser.json()));
 //compress response
 app.use(compression());
 //cross origin resource sharing
@@ -22,7 +22,7 @@ app.use('/assets', express.static(`${__dirname}assets/public`));
 //RAVEN
 // Must configure Raven before doing anything else with it
 if (SENTRY) {
-	Raven.config(SENTRY, { environment: ENV }).install();
+	Raven.config(SENTRY, {environment: ENV}).install();
 	// The request handler must be the first middleware on the app
 	app.use(Raven.requestHandler());
 }

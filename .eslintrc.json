@@ -25,6 +25,18 @@
     "quotes": ["error", "single"],
     "prefer-template": 2,
     "space-infix-ops": ["error"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "key-spacing": ["error", {
+      "singleLine": {
+          "beforeColon": false,
+          "afterColon": true
+      },
+      "multiLine": {
+          "beforeColon": false,
+          "afterColon": true,
+          "align": "colon"
+      }
+  }]
   }
 }

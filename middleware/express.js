@@ -1,5 +1,5 @@
 //import Raven from 'raven';
-import { ERROR_MESSAGE_DEFAULT } from '../constant';
+import {ERROR_MESSAGE_DEFAULT} from '../constant';
 import httpStatus from 'http-status';
 import expressValidation from 'express-validation';
 import APIError from './APIError';
@@ -13,7 +13,7 @@ export const middleware = {
 		app.use((req, res, next) => {
 			let resSuccess = (data, status = httpStatus.OK) => {
 				let dataObj = data;
-				return res.status(status).json({ data: dataObj });
+				return res.status(status).json({data: dataObj});
 			};
 
 			let resError = (
@@ -46,7 +46,7 @@ export const middleware = {
 				err.isPublic || req.query.error === '1'
 					? {
 						message: err.message,
-						stack: err.stack
+						stack  : err.stack
 					  }
 					: {
 						message: `${err.status}-${httpStatus[`${err.status}_NAME`]}-${

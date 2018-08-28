@@ -1,12 +1,13 @@
 # Project
 
 ### start project :
+ - Need to install `yarn` if you want to run with `yarn` 
+ - `yarn install` | `npm install` 
+ - `yarn start` | `npm start` 
 
-    - `yarn install` | `npm install`
-    - `yarn start` | `npm start`
-
+  - To run nodemon `npm install -g nodemon` after that run `yarn n-start`  
 ### run test:
-
+ 
     - `yarn coverage`
 
 ### Eslint
@@ -19,7 +20,7 @@
 
         - `yarn eslint-fix`
 
-# Code convention (ESLINT)
+# Code convention (ESLINT) 
 
 ## With Visual studio code
 
@@ -53,14 +54,6 @@
 
   - `docker run --name='skeleton' -p 3001:3002 --env NODE_ENV='production' docker-skeleton`
 
-
-
-
-
-
-
-git pull
-docker build -t 'skeleton'
-docker stop 'docker-skeleton'
-docker rm 'docker-skeleton'
-docker run --name='skeleton' -p 3001:3002 --env NODE_ENV='production' docker-skeleton 
+# GITHUB
+  - generate key ssh : `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+  - Copy rsa to clipsboard (install xclip)) : `xclip -sel clip < ~/.ssh/id_rsa.pub`
